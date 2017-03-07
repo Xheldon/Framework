@@ -1,0 +1,40 @@
+{
+  "name": "webpack-demo",
+  "version": "0.0.1",
+  "description": "webpack demo",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js",
+    "build": "rm -rf build && webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "xheldon",
+  "devDependencies": {
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "del": "^2.2.1",
+    "ejs": "^2.4.2",
+    "ejs-compiled-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "glob": "^7.0.5",
+    "gulp": "^3.9.1",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-jsbeautifier": "^2.0.3",
+    "gulp-util": "^3.0.7",
+    "highlight.js": "^9.5.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.21.0",
+    "htmlencode": "0.0.4",
+    "jquery": "^3.1.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^3.2.2",
+    "static-server": "^2.0.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

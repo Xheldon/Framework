@@ -1,0 +1,26 @@
+{
+  "name": "vue_demo",
+  "description": "vue_demo",
+  "main": "",
+  "authors": [
+    "xheldon"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "xheldon"
+  ],
+  "homepage": "https://github.com/Xheldon/ForTest",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}
