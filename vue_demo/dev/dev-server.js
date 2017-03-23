@@ -55,6 +55,14 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
             options.log("------".magenta);
             options.log("Webpack: 编译中...".blue);
         }
+    },
+    log: function(msg){
+        if(msg.indexOf('webpack: wait until bundle finished: ') === 0 ){
+            var pageName = msg.split('webpack: wait until bundle finished: ')[1];
+            console.log(('\n请等待编译完成，再尝试访问: ' + pageName).red);
+        }else{
+            console.log(msg);
+        }
     }
 });
 
@@ -100,7 +108,5 @@ app.use(staticPath, express.static('./static'));
 module.exports = app.listen(port, function(err){
     if(err){
         console.log(err);
-        return
     }
-    console.log('开发模式即将启动，稍后请访问 http://localhost:' + port + '/module/ModuleName.html 调试\n');
 });
