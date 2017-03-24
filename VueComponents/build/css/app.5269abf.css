@@ -1,0 +1,16 @@
+
+body{
+	background: green;
+	font-size: 30px;
+	color: blue;
+}
+#test{
+	width: 200px;
+	height: 200px;
+	background:red;
+}
+span{
+    color: greenyellow;
+}div{
+    color: #fccccf;
+}

@@ -1,19 +1,16 @@
-var path = require('path');
 var webpack = require('webpack');
 var HtmlwebpackPlugin = require('html-webpack-plugin'); 
 
-// 常用配置,项目较小不抽出了
-var ROOT_PATH = path.resolve(__dirname);//根路径
-var APP_PATH = path.resolve(ROOT_PATH, 'app');//开发路径
-var BUILD_PATH = path.resolve(ROOT_PATH, 'build');//输出路径
 var  ExtractTextPlugin= require('extract-text-webpack-plugin');
+
+var config = require('./config.js');
 
 module.exports = {
 	entry: {
-		app: path.resolve(APP_PATH, 'index/app.js')
-},
+		app: config.entry
+    },
 	output: {
-		path: BUILD_PATH,
+		path: config.BUILD_PATH,
 		filename: '[name].[hash:7].js',
 		chunkFilename: '[id]-[name].js'
 	},
@@ -21,7 +18,7 @@ module.exports = {
 	    extensions:['', '.vue', '.js'],
 		alias: {
             //注意, 这里导入的是/node_module/vue/dist/vue.js, 跟 vue-router.js 的不同
-			vue: 'vue/dist/vue.js'
+			vue$: 'vue/dist/vue.js'
 		}
 	},
 	//开启 dev source map
@@ -31,7 +28,12 @@ module.exports = {
 		historyApiFallback: true,
 		hot: true,
 		inline: true,
+<<<<<<< HEAD
+		progress: true,
+        host: '0.0.0.0'
+=======
 		progress: true
+>>>>>>> 32409fd... Vue 实现单页应用的三种方式
 	},
 	module: {
 		loaders:[
@@ -44,30 +46,48 @@ module.exports = {
                 // loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
                 loader: 'style!css'
             },
+            {
+                test: /\.scss$/,
+                loader: 'style!css!sass?sourceMap'
+            },
 			{
 				test: /\.js$/,
 				loader: 'babel',
-				include: ROOT_PATH,
+				include: config.ROOT_PATH,
 				exclude: /node_modules/
-			},
+			}/*,
 			{
 				test: /\.html$/,
 				loader: 'vue-html',
 				exclude: /tpl/
-			}
+			}*/,
+            //字体
+            {
+                test: /\.((ttf|eot|woff|svg)(\?t=[0-9]\.[0-9]\.[0-9]))|(ttf|eot|woff|svg)\??.*$/,
+                loader: 'url?limit=10000&name=fonts/[name].[ext]'
+            },
+            {
+                test: /\.(png|jpe?g|gif)(\?.*)?$/,
+                loader: 'url',
+                query: {
+                    limit: 10000,
+                    name: 'img/[name].[ext]'
+                }
+            },
 		]
 	},
 	vue:{
 		loaders: {
             // css: ExtractTextPlugin.extract('css-loader')
+            scss: 'style-loader!css-loader!sass-loader',
             css: 'style-loader!css-loader'
 		}
 	},
 	plugins:[
 		new HtmlwebpackPlugin({
 			title: 'app',
-			filename: 'app.html',
-			template: 'app/index/tpl.html',
+			filename: 'index.html',
+			template: config.template,
 			chunks: ['app'],
 			inject: 'body'
 		}),
