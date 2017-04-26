@@ -1,9 +1,5 @@
 <template>
     <com-main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f1a7898... 完成吸顶测试
         <div slot="content" class="content">
             <ul class='placeholder'>
                 <li>填充列表 1 1 1 1 1 1 1 1 1 1 1</li>
@@ -191,7 +187,6 @@
                 <li>填充列表 60 60 60 60 60 60 60 60 60 60 60</li>
             </ul>
         </div>
-<<<<<<< HEAD
     </com-main>
 </template>
 <script>
@@ -220,6 +215,7 @@
         }
     }
 </script>
+
 <style scope lang="scss">
     ul.placeholder{
         width: 100%;
@@ -253,72 +249,3 @@
         position: sticky;
     }
 </style>
-=======
-        <div slot="content" class="content">这里是主页的内容</div>
-=======
->>>>>>> f1a7898... 完成吸顶测试
-    </com-main>
-</template>
-<script>
-    import comMain from '../components/default.vue';
-    let ele;
-    let i = 0;
-    export default{//这个是 es6的导出, 和 commonsJS 的 module.exports 不一样
-        data(){
-            return{
-                isFixed: false,
-            }
-        },
-        components: {
-            comMain,
-        },
-        methods:{
-            onScroll(){
-                let vm = this;
-                vm.isFixed = ele.getBoundingClientRect().top <= 50;
-            }
-        },
-        mounted(){
-            ele = document.getElementById('fixed');
-            this.isFixed = ele.getBoundingClientRect().top <= 50;
-            window.addEventListener('scroll', this.onScroll)
-        }
-    }
-</script>
-<<<<<<< HEAD
->>>>>>> 32409fd... Vue 实现单页应用的三种方式
-=======
-<style scope lang="scss">
-    ul.placeholder{
-        width: 100%;
-        padding: 0;
-        margin-top: 10px;
-        li{
-            border: 1px solid #2aabd2;
-            width: 100%;
-            height: 20px;
-            line-height: 20px;
-            list-style-type: none;
-        }
-    }
-    div.fixed{
-        background-color: red;
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        z-index: 999;
-        margin-top: 50px;
-        position: relative;
-    }
-    div.isfixed{
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        z-index: 999;
-        top: 50px;
-        position: fixed;
-        position: -webkit-sticky;
-        position: sticky;
-    }
-</style>
->>>>>>> f1a7898... 完成吸顶测试

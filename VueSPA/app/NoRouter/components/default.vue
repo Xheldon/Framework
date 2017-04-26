@@ -1,14 +1,6 @@
 <template>
     <transition name="go">
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div class="body" @scroll="scroll">
-=======
-        <div class="body">
->>>>>>> 32409fd... Vue 实现单页应用的三种方式
-=======
-        <div class="body" @scroll="scroll">
->>>>>>> f1a7898... 完成吸顶测试
             <com-header :title="pageName"></com-header>
             <slot name="content"></slot>
             <com-footer :copyright="myName"></com-footer>
@@ -25,20 +17,11 @@
                 pageName: 'Vue SPA',
             }
         },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f1a7898... 完成吸顶测试
         methods:{
             scroll(){
                 console.log('scrolled!');
             }
         },
-<<<<<<< HEAD
-=======
->>>>>>> 32409fd... Vue 实现单页应用的三种方式
-=======
->>>>>>> f1a7898... 完成吸顶测试
         components:{
             comHeader, comFooter
         }
