@@ -28,12 +28,8 @@ module.exports = {
 		historyApiFallback: true,
 		hot: true,
 		inline: true,
-<<<<<<< HEAD
 		progress: true,
         host: '0.0.0.0'
-=======
-		progress: true
->>>>>>> 32409fd... Vue 实现单页应用的三种方式
 	},
 	module: {
 		loaders:[

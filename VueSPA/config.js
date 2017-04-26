@@ -7,10 +7,14 @@ exports.BUILD_PATH = BUILD_PATH = path.resolve(ROOT_PATH, 'build');//输出路�
 // three type of switch : NoRouter, NoRouterWithIs, Router
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 let on = 'NoRouter';
 =======
 let on = 'Router';
 >>>>>>> 32409fd... Vue 实现单页应用的三种方式
+=======
+let on = 'NoRouter';
+>>>>>>> f1a7898... 完成吸顶测试
 
 switch (on){
     case 'NoRouter':

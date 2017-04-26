@@ -14,11 +14,15 @@ window.app = new Vue({
         }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f1a7898... 完成吸顶测试
     methods:{
         scroll(){
             console.log('scr')
         }
     },
+<<<<<<< HEAD
     render(h){//组件依赖的 data 改变后, render 会重新渲染
         return h(this.viewComponent)
     }
@@ -28,6 +32,11 @@ window.app = new Vue({
     }
 
 >>>>>>> 32409fd... Vue 实现单页应用的三种方式
+=======
+    render(h){//组件依赖的 data 改变后, render 会重新渲染
+        return h(this.viewComponent)
+    }
+>>>>>>> f1a7898... 完成吸顶测试
 });
 // 点击返回和前进按钮的时候触发此事件
 window.addEventListener('popstate', () => {

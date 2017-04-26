@@ -1,6 +1,9 @@
 <template>
     <com-main>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f1a7898... 完成吸顶测试
         <div slot="content" class="content">
             <span class="item item-1">Xheldon 1</span>
             <span class="item item-2">Xheldon 2</span>
@@ -8,9 +11,12 @@
             <span class="item item-4">Xheldon 4</span>
             <span class="item item-5">Xheldon 5</span>
         </div>
+<<<<<<< HEAD
 =======
         <div slot="content" class="content">这里是关于的内容</div>
 >>>>>>> 32409fd... Vue 实现单页应用的三种方式
+=======
+>>>>>>> f1a7898... 完成吸顶测试
     </com-main>
 </template>
 <script>
@@ -22,6 +28,9 @@
         props:['className']
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f1a7898... 完成吸顶测试
 </script>
 <style lang="scss" scoped>
     .content{
@@ -44,7 +53,11 @@
             flex-basis: 0;
         }
     }
+<<<<<<< HEAD
 </style>
 =======
 </script>
 >>>>>>> 32409fd... Vue 实现单页应用的三种方式
+=======
+</style>
+>>>>>>> f1a7898... 完成吸顶测试
