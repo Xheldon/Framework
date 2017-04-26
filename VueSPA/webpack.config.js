@@ -90,4 +90,4 @@ module.exports = {
         new ExtractTextPlugin('css/[name].[hash:7].css')
 	]
 };
-// 1. 第一个
+// 2. 第二个
