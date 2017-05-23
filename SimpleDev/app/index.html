@@ -6,10 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/index.css" />
     <title>Canvas</title>
+    <style>
+        #target{
+            float: left;
+            width: 500px;
+            height: 500px;
+            background-color: bisque;
+        }
+        #source{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+        #__bs_notify__{
+            font-size: 12px!important;
+        }
+    </style>
 </head>
 <body>
-    你好
-    <canvas id="paint" width="500" height="500"></canvas>
+    <!--<canvas id="paint" width="500" height="500"></canvas>-->
+    <img src="./img/girl.png" draggable="true">
+    <img src="./img/cursor.png" draggable="true">
+    <div id="target">Come on baby!</div>
+    <div id="source" draggable="true">On the way!</div>
     <script src="./js/index.js"></script>
 </body>
 </html>

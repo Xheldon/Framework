@@ -16,7 +16,7 @@ gulp.task('serve', ['sass', 'babel'], function () {
         server: "./app"
     });
     gulp.watch("app/css/*.scss", ['sass']);
-    gulp.watch("app/js/index-es6.js", ['babel']);
+    gulp.watch("app/js/index-es6.js", ['babel']).on('change', browserSync.reload);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
