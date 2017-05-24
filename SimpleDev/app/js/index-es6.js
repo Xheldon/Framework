@@ -12,7 +12,7 @@ window.onload = function () {
         value.addEventListener('dragstart', function (e) {
             e.dataTransfer.effectAllowed = 'move';
             console.log('Start:', e);
-            e.dataTransfer.setDragImage(source, '50', '50');
+            e.dataTransfer.setDragImage(source, 50, 50);
             // e.dataTransfer.addElement(source);
         });
     });
