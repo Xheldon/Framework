@@ -6,30 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/index.css" />
     <title>Canvas</title>
-    <style>
-        #target{
-            float: left;
-            width: 500px;
-            height: 500px;
-            background-color: bisque;
-        }
-        #source{
-            float: left;
-            width: 100px;
-            height: 100px;
-            background-color: blueviolet;
-        }
-        #__bs_notify__{
-            font-size: 12px!important;
-        }
-    </style>
 </head>
 <body>
-    <!--<canvas id="paint" width="500" height="500"></canvas>-->
-    <img src="./img/girl.png" draggable="true">
-    <img src="./img/cursor.png" draggable="true">
-    <div id="target">Come on baby!</div>
-    <div id="source" draggable="true">On the way!</div>
+tips: ctrl+z 撤销 shift + 鼠标拖动可以画正圆和正矩形
+    <div id="tools">
+        <ul>
+            <li tool="pencil">铅笔</li>
+            <li tool="nib">笔尖类型</li>
+            <li tool="rect">矩形</li>
+            <li tool="arc">椭圆形</li>
+            <li tool="brush">喷绘</li>
+            <li tool="eraser">橡皮</li>
+            <li tool="clear">清空</li>
+            <li tool="save">保存到本地</li>
+        </ul>
+    </div>
+    <div id="control">
+        <!--控制板默认是铅笔-->
+        <input type="range" max="10" min="1" step="1" value="1">
+    </div>
+    <div id="color-panel">
+        <ul>
+            <li color="black" class="active">black</li>
+            <li color="blue">blue</li>
+            <li color="yellow">yellow</li>
+            <li color="red">red</li>
+            <li color="green">green</li>
+        </ul>
+    </div>
+    <canvas id="paint" width="500" height="500"></canvas>
+    <img src="./img/fg.png" id="fg" />
     <script src="./js/index.js"></script>
 </body>
 </html>
