@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+            width: 300px;
+            height: 100px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="p">
+        <img src="/bg_1.png" alt="">
+    </div>
+    <script>
+        [...document.getElementsByTagName('img')].forEach((img) => {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/bg_1.png', true);
+            xhr.responseType = 'blob';
+            xhr.onreadystatechange = function () {
+                console.log(img.src);
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    console.log('res1:', xhr.response);
+                    if (xhr.status === 200 || xhr.status === 304) {
+                        console.log('res2:', xhr.response);
+                    }
+                }
+            }
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
