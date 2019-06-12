@@ -1,0 +1,14 @@
+{
+  "name": "serverdev",
+  "version": "0.0.1",
+  "description": "simple node dev server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xheldon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

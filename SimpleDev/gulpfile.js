@@ -25,6 +25,7 @@ gulp.task('sass', function () {
     return gulp.src("app/css/index.scss")
         .pipe(sass())
         .on('error', notity)
+        .pipe(rename('index.output.css'))
         .pipe(gulp.dest("app/css"))
         .pipe(browserSync.stream());
 });
@@ -35,7 +36,7 @@ gulp.task('babel', function () {
             presets: ['es2015']
         }))
         .on('error', notity)
-        .pipe(rename('index.js'))
+        .pipe(rename('index.output.js'))
         .pipe(gulp.dest('app/js'))
 });
 
