@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noEmit": true,
+      "strict": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "module": "CommonJS",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "checkJs": true,
+      "alwaysStrict": true,
+      "downlevelIteration": true,
+      "lib": ["esnext", "dom", "esnext.asynciterable"],
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": ".",
+    },
+    "include": [
+      "**/*.d.ts",
+      "**/*.ts",
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+    ]
+  }
+  
