@@ -2,7 +2,7 @@ import React from 'react';
 import * as Action from './duck';
 import { connect } from 'react-redux';
 import { State } from '../rootReducer';
-
+import { clientMainNumSelector } from '../selector/clientMainSelector';
 type Props = StateProps & DispatchProps;
 
 class ClientMain extends React.Component<Props> {
@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch: any): any => ({
 });
 
 const mapStateToProps = (state: State) => ({
-    num: state.num,
+    num: clientMainNumSelector(state)
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;

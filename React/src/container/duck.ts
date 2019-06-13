@@ -3,11 +3,11 @@ export enum Constants {
     ADD = 'Main/Add',
 };
 
-export interface State {
+export interface clientMainState {
     num: number,
 }
 
-export const initialState = {
+export const initialState: clientMainState = {
     num: 0
 }
 
@@ -19,16 +19,16 @@ export const add = (num: number) => ({
 
 // reducer
 export default function reducer(
-    state: State = initialState,
+    state: clientMainState = initialState,
     action: any
-): State {
+): clientMainState {
     Object.freeze(state);
     console.log(state);
     switch (action.type) {
         case Constants.ADD:
             return {
                 ...state,
-                num: action.num,
+                num: state.num + action.num,
             };
         default:
             return state;
